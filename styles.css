@@ -11,6 +11,11 @@ body {
     scroll-behavior: smooth;
 }
 
+h1:hover {
+    transform: scale(1);
+    color: rgb(5, 175, 138);
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -100,12 +105,24 @@ h2 {
     color: #00adb5;
 }
 
+h2:hover {
+    transform: scale(1.1);
+    color: rgb(212, 135, 19);
+}
+
 .about-content {
     display: flex;
     align-items: center;
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-content img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.786);
 }
 
 .about-content img {
@@ -113,10 +130,78 @@ h2 {
     border-radius: 10px;
 }
 
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
 .about-text p {
     font-size: 1.1rem;
     margin-bottom: 20px;
     color: #ccc;
+    text-align: left;
+}
+
+.skills-section {
+    background-color: #1a1a1a;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.skills-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #00adb5;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.skill-card {
+    background-color: #28284e;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-direction: column;
+    position: relative;
+}
+
+.skill-card:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.550);
+}
+
+.skill-card img {
+    max-width: 60px;
+    height: auto;
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.1));
+}
+
+/* 🟢 Hover name show only */
+.skill-card p {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.skill-card:hover p {
+    opacity: 1;
 }
 
 .services-grid {
@@ -132,6 +217,12 @@ h2 {
     padding: 20px;
     border-radius: 10px;
     transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.2);
+    color: #00adb5;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.674);
 }
 
 .service-card:hover {
@@ -159,6 +250,11 @@ h2 {
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.portfolio-item:hover {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.800);
 }
 
 .portfolio-item {
@@ -197,7 +293,11 @@ h2 {
 }
 
 .portfolio-overlay p {
-    color: #fff;
+    color: ghostwhite;
+}
+
+.Pro {
+    color: ghostwhite;
 }
 
 #contact-form {
@@ -263,6 +363,10 @@ footer {
 
     .about-content {
         flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text p {
         text-align: center;
     }
 
